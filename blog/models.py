@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Post(models.Model):
     ''' 
     Class representing a single blog post.
@@ -15,7 +16,7 @@ class Post(models.Model):
     objects are also deleted (i.e. when you remove a blog post, the associated 
     comments are also deleted).
     '''
-    
+
     title = models.CharField(max_length=200)
     body = models.TextField()
     
