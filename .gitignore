@@ -1,7 +1,6 @@
-*.pyc
-*.tmx
-*.txt
+__pycache__/
 .DS_Store
 ..env/
+.env/
 .vscode/
-__pycache__/
+*.pyc
