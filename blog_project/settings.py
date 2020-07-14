@@ -31,13 +31,17 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # Apps included in django
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # My apps
     'blog.apps.BlogConfig',
+    'accounts.apps.AccountsConfig',
+    # Third-party apps
     'crispy_forms',
 ]
 
@@ -124,5 +128,5 @@ STATIC_URL = '/static/'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # For handling the logging in and out of users
-LOGIN_REDIRECT_URL = 'home'
+LOGIN_REDIRECT_URL = 'home'  # redirects to homepage upon successful login
 LOGOUT_REDIRECT_URL = 'home'
