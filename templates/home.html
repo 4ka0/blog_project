@@ -2,11 +2,11 @@
 
 {% block content %}
     {% for post in object_list %}
-    <div class="row mb-3">
-        <div class="col">
+    <div class="row pt-2">
+        <div class="col py-2 bg-warning">
             <h4><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h4>
             <h5>By {{ post.author }}</h5>
-        </div> 
+        </div>
     </div>
     {% endfor %}
 {% endblock content %}

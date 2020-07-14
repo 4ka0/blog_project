@@ -7,38 +7,67 @@
     <body>
         <div class="container-fluid">
 
-            <!-- Navbar -->
-            <nav class="navbar navbar-dark bg-primary">
-                <a class="navbar-brand" href="{% url 'home' %}">Django-Powered Blog</a>
-            </nav>
-
             <!-- Main body -->
             <div class="row">
-                <!-- Left colum (basic actions) -->
-                <div class="col-2 py-4">
-                    <a class="btn btn-success mb-4" href="{% url 'home' %}" role="button">Show all posts</a>
-                    <a class="btn btn-success mb-4" href="{% url 'post_new' %}" role="button">Add new post</a>
 
-                    <!-- User ogin status message -->
-                    {% if user.is_authenticated %}
-                        <p>Hi {{ user.username }}!</p>
-                        <!-- To log out -->
-                        <p><a href="{% url 'logout' %}">Log out</a></p>
-                    {% else %}
-                        <p>You are not logged in.</p>
-                        <a href="{% url 'login' %}">Log In</a>
-                    {% endif %}
+                <!-- Left narrow colum -->
+                <div class="col-2 bg-secondary">
 
+                    <!-- Bio card -->
+                    <div class="card mt-3">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Jon Lee</h5>
+                            <img class="card-img-top" src="..." alt="Profile image">
+                            <p class="card-text text-center pt-3">Hi there. I'm a Japanese translator by trade and a webdev in training. You can find out more about me here.</p>
+                        </div>
+                    </div>
 
+                    <!-- Action button card -->
+                    <div class="card mt-3">
+                        <div class="card-body text-center">
+                            <!-- Button to show all posts -->
+                            <a class="btn btn-success mb-4" href="{% url 'home' %}" role="button">Show all posts</a>
+                            <!-- Button to add a new post -->
+                            <a class="btn btn-success mb-4" href="{% url 'post_new' %}" role="button">Add new post</a>
+                        </div>
+                    </div>
+
+                    <!-- User login status message card -->
+                    <!-- Action button card -->
+                    <div class="card my-3">
+                        <div class="card-body">
+                            {% if user.is_authenticated %}
+                                <p>Hi {{ user.username }}!</p>
+                                <!-- Log out button -->
+                                <p><a href="{% url 'logout' %}">Log out</a></p>
+                            {% else %}
+                                <!-- Log in button -->
+                                <p>You are not logged in.</p>
+                                <a href="{% url 'login' %}">Log In</a>
+                            {% endif %}
+                        </div>
+                    </div>
 
                 </div>
-                <!-- Blog list column (main content) -->
-                <div class="col-6 py-4">
+
+                <!-- Right wide column (main content) -->
+                <div class="col-10">
+
+                    <!-- Top banner -->
+                    <div class="row bg-info" >
+                        <div class="card bg-primary mx-auto" >
+                            <div class="card-body bg-success" >
+                                <h1 class="card-title text-center">Basic Blog - Powered by Django and Styled With Bootstrap</h1>
+                                <h4 class="card-subtitle text-center">Built using "Django for Beginners"</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- List of all blog entries -->
                     {% block content %}
                     {% endblock content %}
                 </div>
-                <!-- Right column (empty spacer)
-                <div class="col-2 py-4"></div>-->
+
             </div>
 
         <!-- Bootstrap related javascript -->
