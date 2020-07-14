@@ -6,25 +6,38 @@
     </head>
     <body>
         <div class="container-fluid">
-                
+
             <!-- Navbar -->
             <nav class="navbar navbar-dark bg-primary">
                 <a class="navbar-brand" href="{% url 'home' %}">Django-Powered Blog</a>
             </nav>
-       
+
             <!-- Main body -->
             <div class="row">
                 <!-- Left colum (basic actions) -->
-                <div class="col-2 py-4">    
+                <div class="col-2 py-4">
                     <a class="btn btn-success mb-4" href="{% url 'home' %}" role="button">Show all posts</a>
                     <a class="btn btn-success mb-4" href="{% url 'post_new' %}" role="button">Add new post</a>
+
+                    <!-- User ogin status message -->
+                    {% if user.is_authenticated %}
+                        <p>Hi {{ user.username }}!</p>
+                        <!-- To log out -->
+                        <p><a href="{% url 'logout' %}">Log out</a></p>
+                    {% else %}
+                        <p>You are not logged in.</p>
+                        <a href="{% url 'login' %}">Log In</a>
+                    {% endif %}
+
+
+
                 </div>
                 <!-- Blog list column (main content) -->
                 <div class="col-6 py-4">
                     {% block content %}
                     {% endblock content %}
                 </div>
-                <!-- Right column (empty spacer) 
+                <!-- Right column (empty spacer)
                 <div class="col-2 py-4"></div>-->
             </div>
 
