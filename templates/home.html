@@ -2,11 +2,17 @@
 
 {% block content %}
     {% for post in object_list %}
-    <div class="row pt-2">
-        <div class="col py-2 bg-warning">
-            <h4><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h4>
-            <h5>By {{ post.author }}</h5>
+
+    <div class="card flex-row flex-wrap my-4">
+
+        <!-- Card title and text -->
+        <div class="card-block px-4 py-4">
+            <h4 class="card-title "><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h4>
+            <p class="text-muted">By {{ post.author }}</p>
+            <p class="card-text">{{ post.body|slice:":200" }}...</p>
         </div>
+
     </div>
+
     {% endfor %}
 {% endblock content %}
