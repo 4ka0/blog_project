@@ -9,8 +9,8 @@
             <p class="text-muted">By {{ post.author }}</p>
             <p class="card-text">{{ post.body|linebreaksbr }}</p>
 
-            <a class="btn btn-primary mr-3" href="{% url 'post_edit' post.pk %}" role="button">Edit this post</a>
-            <a class="btn btn-primary" href="{% url 'post_delete' post.pk %}" role="button">Delete this post</a>
+            <a class="btn btn-outline-info mr-3" href="{% url 'post_edit' post.pk %}" role="button">Edit this post</a>
+            <a class="btn btn-outline-danger" href="{% url 'post_delete' post.pk %}" role="button">Delete this post</a>
 
         </div>
     </div>

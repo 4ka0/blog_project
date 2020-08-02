@@ -11,10 +11,9 @@
             <div class="row">
 
                 <!-- Top banner -->
-                <div class="col-12 bg-primary" >
-                    <div class="col-12 bg-primary py-4">
-                        <h2 class="text-center text-light">Simple Blog - Powered by Django and Styled with Bootstrap</h2>
-                        <h4 class="text-center text-light">Built Using Chapters 5-7 of "Django for Beginners" by Will Vincent</h4>
+                <div class="col-12 bg-info" >
+                    <div class="col-12 bg-info py-4">
+                        <h2 class="text-center text-light">Very Basic Blog</h2>
                     </div>
                 </div>
 
@@ -25,9 +24,9 @@
                     <div class="card mt-4">
                         <div class="card-body text-center">
                             <!-- Button to show all posts -->
-                            <a class="btn btn-primary mb-2" href="{% url 'home' %}" role="button">Show all posts</a>
+                            <a class="btn btn-outline-info mb-2" href="{% url 'home' %}" role="button">Show all posts</a>
                             <!-- Button to add a new post -->
-                            <a class="btn btn-primary mt-2" href="{% url 'post_new' %}" role="button">Add new post</a>
+                            <a class="btn btn-outline-info mt-2" href="{% url 'post_new' %}" role="button">Add new post</a>
                         </div>
                     </div>
 
@@ -37,18 +36,18 @@
                             {% if user.is_authenticated %}
                                 <p class="text-muted">Hello {{ user.username }}</p>
                                 <!-- Log out button -->
-                                <a class="btn btn-primary mb-t" href="{% url 'logout' %}" role="button">Log out</a>
+                                <a class="btn btn-outline-info mb-t" href="{% url 'logout' %}" role="button">Log out</a>
                             {% else %}
                                 <p class="text-muted">You are not logged in.</p>
                                 <!-- Log in button -->
-                                <a class="btn btn-primary mt-2" href="{% url 'login' %}" role="button">Log in</a>
+                                <a class="btn btn-outline-info mt-2" href="{% url 'login' %}" role="button">Log in</a>
                             {% endif %}
                         </div>
                     </div>
 
                     <!-- Action button card -->
                     <div class="card mt-4">
-                        <div class="card-body text-muted">
+                        <div class="card-body text-muted text-center">
                             <p>To log in as a guest, please use the following credentials:</p>
                             <p>Name: Guest</p>
                             <p>Password: banana789</p>
