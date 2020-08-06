@@ -2,7 +2,9 @@
 
 ### Overview
 
-A basic blog application provided with CRUD functionality. Built following chapters 5-7 of [Django for Beginners](https://djangoforbeginners.com).</br>
+A basic blog application provided with CRUD functionality.</br>
+
+Built following chapters 5-7 of [Django for Beginners](https://djangoforbeginners.com).</br>
 
 [Live demo](https://jjl-blog.herokuapp.com) (deployed on Heroku).
 
