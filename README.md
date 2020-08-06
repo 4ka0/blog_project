@@ -23,6 +23,7 @@ Doesn't include user authentication permissions as this was addressed in later c
 * Python 3.7
 * Django 3.0.8
 * django-crispy-forms 1.9.2
+* Gunicorn 20.0.4
 * Bootstrap 4
 * Visual Studio Code 1.47.3
 * macOS 10.14.6
