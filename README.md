@@ -28,6 +28,6 @@ Doesn't include user authentication permissions as this was addressed in later c
 * macOS 10.14.6
 * Heroku
 
-### Screenshot
+### Screenshot:
 
 ![alt text](readme_screenshot.png "Portfolio screenshot")
