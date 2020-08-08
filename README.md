@@ -1,4 +1,4 @@
-# blog_project
+# Blog Project
 
 ### Overview
 
