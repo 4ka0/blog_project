@@ -28,6 +28,7 @@ Doesn't include user authentication permissions as this was addressed in later c
 * Visual Studio Code 1.47.3
 * macOS 10.14.6
 * Heroku
+* Pipenv
 
 ### Screenshot:
 
