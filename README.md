@@ -6,8 +6,6 @@ A basic blog application provided with CRUD functionality.</br>
 
 Built following chapters 5-7 of [Django for Beginners](https://djangoforbeginners.com).</br>
 
-[Live demo](https://jjl-blog.herokuapp.com)
-
 ### Features
 
 Uses a basic Post model including title, body, and author fields. The author field is linked to Django's User model through use of a foreign key, providing a one-to-many relationship between authors and posts.</br>
